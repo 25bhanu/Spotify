@@ -3,10 +3,11 @@ let currentSong = new Audio();
 let currfolder;
 let songs;
 let singer_name="Shubh";
+
 async function getsongs(folder) {
 
     currfolder = folder;
-    let a = await fetch(`/${currfolder}/`);
+    let a = await fetch(`/${currfolder}/`); 
     let response = await a.text();
     let div = document.createElement("div");
     div.innerHTML = response;
@@ -15,9 +16,12 @@ async function getsongs(folder) {
     for (let i = 0; i < as.length; i++) {
         const element = as[i];
         if (element.href.endsWith(".mp3")) {
+            console.log("element.href=",element.href);
+            console.log("element.href.split(`/${folder}/`)[1]=",element.href.split(`/${folder}/`)[1]);
             songs.push(element.href.split(`/${folder}/`)[1]);
         }
     }
+    console.log("songs=",songs);
     return songs;
 }
 
