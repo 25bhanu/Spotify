@@ -1,11 +1,117 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="icon" href="./img/favicon.svg" type="image/svg+xml">
+    <title>Spotify - Web Player:Music for everyone</title>
+    <link rel="stylesheet" href="index/style.css">
+    <link rel="stylesheet" href="index/uility.css">
 </head>
+
 <body>
-  <marquee>  <h1> bhanu</h1></marquee>
+    <div class="container bg-black">
+        <div class="left m-1">
+            <div class="close">
+                <img class="invert" src="img/cross.svg" alt="cross">
+            </div>
+            <div class="home bg-gray rounded p-1">
+                <div class="logo">
+                    <img class="invert" src="img/logo.svg" alt="logo">
+                </div>
+                <ul>
+                    <li><img class="invert" src="img/home.svg" alt="Home">Home</li>
+                    <li><img class="invert" src="img/search.svg" alt="Search">Search</li>
+                </ul>
+            </div>
+            <div class="library bg-gray rounded p-1">
+                <div class="heading">
+                    <h3>Your Library</h3>
+                    <span>+</span>
+                </div>
+                <div class="songlist">
+                    <ul>
+                        <!-- <li>
+                            <img class="invert" src="img/music.svg" alt="music">
+                            <div class="info">
+                                <div>Song Name</div>
+                                <div>Artist Name</div>
+                            </div>
+                            <div class="playnow">
+                                <span>Play Now</span>
+                                <img class="invert" src="img/play.svg" alt="P">
+                            </div>
+                        </li> -->
+                    </ul>
+                </div>
+                <div class="footer">
+                    <span><a href="https://www.spotify.com/in-en/legal/end-user-agreement/">Legal</a></span>
+                    <span><a href="https://www.spotify.com/in-en/safetyandprivacy">Safety & Privacy center</a></span>
+                    <span><a href="https://www.spotify.com/in-en/legal/privacy-policy/">Privacy Policy</a></span>
+                    <span><a href="https://www.spotify.com/in-en/legal/cookies-policy/">Cookies</a></span>
+                    <span><a href="https://www.spotify.com/in-en/legal/privacy-policy/#s3">About Ads</a></span>
+                    <span><a href="https://www.spotify.com/in-en/accessibility">Accessibility</a></span>
+                </div>
+            </div>
+        </div>
+        <div class="right bg-gray rounded">
+            <div class="header">
+                <div class="nav">
+                    <div class="hamburgercontainer">
+                        <img class="hamburger invert" src="img/hamburger.svg" alt="Menu">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"
+                            color="#ffffff" fill="none">
+                            <path d="M15 6C15 6 9.00001 10.4189 9 12C8.99999 13.5812 15 18 15 18" stroke="currentColor"
+                                stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"
+                            color="#ffffff" fill="none">
+                            <path d="M9.00005 6C9.00005 6 15 10.4189 15 12C15 13.5812 9 18 9 18" stroke="currentColor"
+                                stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                    </div>
+                </div>
+                <div class="buttons">
+
+                    <button class="signbtn" onclick="window.location.href='../signup/sign.html'">Sign Up</button>
+                    <button class="logbtn" onclick="window.location.href='../login/login.html'">Log In</button>
+                </div>
+            </div>
+            <div class="spotifyplaylist">
+                <h2>Spotify Playlists</h2>
+                <div class="cardcontainer">
+                    
+                </div>
+                <div class="playbar">
+                    <div class="seekbar">
+                        <div class="circle"></div>
+                    </div>
+                    <div class="abovebar">
+
+                        <div class="songinfo"></div>
+                        <div class="songbuttons">
+                            <img id="previous" class="invert" src="img/prevbtn.svg" alt="Previous Song">
+                            <img id="play" class="invert" src="img/play.svg" alt="play">
+                            <img id="next" class="invert" src="img/nextbtn.svg" alt="Next Song">
+                        </div>
+                        <div class="timevol">
+                            <div class="songtime"></div>
+                            <div class="volume">
+                                <img class="invert" src="img/volume.svg" alt="volume">
+                                <!-- <img class="invert" src="img/mute.svg" alt="volume"> -->
+                                <div class="range">
+                                    <input type="range" min="0" max="100" value="30" class="slider" id="volumeRange">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="index/script.js"></script>
 </body>
+
 </html>
